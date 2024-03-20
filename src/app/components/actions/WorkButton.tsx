@@ -7,6 +7,7 @@ import {
   resetCharacter,
   addStatusDnFh,
   modWealth,
+  modWealthWithProfession,
 } from "../../state/character/charcterSlice";
 import { RootState } from "../../state/store";
 import { setGameState } from "../../state/game/gameSlice";
@@ -24,7 +25,7 @@ const WorkButton = ({ text }: WorkButtonProps) => {
   const handleClick = () => {
     handleBaseAction();
 
-    dispatch(modWealth(1));
+    dispatch(modWealthWithProfession());
 
     saveTurn();
     checkRestart();
