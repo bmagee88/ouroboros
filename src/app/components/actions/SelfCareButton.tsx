@@ -1,15 +1,7 @@
-import React, { useState } from "react";
-import { checkFailingHealth, checkIfHealthImproved, getEvent, rollD } from "../../game/utils";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  addLifeEvent,
-  addRecord,
-  resetCharacter,
-  addStatusDnFh,
-  rmStatusDnFh,
-} from "../../state/character/charcterSlice";
-import { RootState } from "../../state/store";
-import { setGameState } from "../../state/game/gameSlice";
+import React from "react";
+import { checkIfHealthImproved } from "../../game/utils";
+import { useDispatch } from "react-redux";
+import { rmStatusDnFh } from "../../state/character/charcterSlice";
 import { useBaseAction } from "../../hooks/actions/useBaseAction";
 
 interface SelfCareButtonProps {

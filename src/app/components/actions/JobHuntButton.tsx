@@ -11,7 +11,7 @@ interface JobHuntButtonProps {
 const JobHuntButton = ({ text }: JobHuntButtonProps) => {
   const dispatch = useDispatch();
 
-  const { handleBaseAction, checkRestart, saveTurn, status, waiting, events } = useBaseAction();
+  const { handleBaseAction, checkRestart, saveTurn, waiting, events } = useBaseAction();
 
   const handleClick = () => {
     handleBaseAction();

@@ -1,16 +1,6 @@
-import React, { useState } from "react";
-import { checkFailingHealth, getEvent, rollD } from "../../game/utils";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  addLifeEvent,
-  addRecord,
-  resetCharacter,
-  addStatusDnFh,
-  modWealth,
-  modWealthWithProfession,
-} from "../../state/character/charcterSlice";
-import { RootState } from "../../state/store";
-import { setGameState } from "../../state/game/gameSlice";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { modWealthWithProfession } from "../../state/character/charcterSlice";
 import { useBaseAction } from "../../hooks/actions/useBaseAction";
 
 interface WorkButtonProps {

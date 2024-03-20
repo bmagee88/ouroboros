@@ -11,7 +11,7 @@ interface SelfCareButtonProps {
 const EducateButton = ({ text }: SelfCareButtonProps) => {
   const dispatch = useDispatch();
 
-  const { handleBaseAction, checkRestart, saveTurn, status, waiting, events } = useBaseAction();
+  const { handleBaseAction, checkRestart, saveTurn, waiting, events } = useBaseAction();
 
   const handleClick = () => {
     handleBaseAction();
