@@ -9,7 +9,7 @@ const CharacterDisplay = () => {
   return (
     <>
       <h2>Character</h2>
-      <div style={{ padding: "1rem", border: "2px solid black", borderRadius: "10%" }}>
+      <div style={{ padding: "1rem", border: "3px solid black", borderRadius: "15px" }}>
         <div className='name'>{character.name}</div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "2rem" }}>
           <div>

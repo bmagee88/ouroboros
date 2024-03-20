@@ -25,6 +25,7 @@ const MainPage = () => {
           flexDirection: "column",
           paddingLeft: "1rem",
           paddingRight: "1rem",
+          minHeight: "100vh",
         }}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div
