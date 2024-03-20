@@ -1,6 +1,6 @@
 import React from "react";
 import { Turn } from "../../../state/character/charcterSlice";
-import "./record-display.scss";
+import "./record-display.style.scss";
 
 interface RecordDisplayProps {
   turnArr: Turn[];

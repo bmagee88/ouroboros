@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../state/store";
 import RecordDisplay from "../RecordDisplay/RecordDisplay";
-import "./history-display.scss";
+import "./history-display.style.scss";
 
 const HistoryDisplay = () => {
   const character = useSelector((state: RootState) => state.character);
