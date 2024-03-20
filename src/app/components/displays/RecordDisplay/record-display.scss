@@ -1,0 +1,16 @@
+.no-wrap {
+  white-space: nowrap;
+}
+
+.record-grid-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.record-grid-item-2 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+.record-grid-item-3 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+}
