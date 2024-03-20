@@ -9,12 +9,19 @@ export interface Turn {
   result: { events: string[] };
 }
 
+interface Profession {
+  name: string;
+  income: number;
+}
+
 interface Status {
   dn: number;
   fh: number[];
   wealth: number;
   le: number;
   age: number;
+  educationLv: number;
+  profession: Profession;
 }
 
 // Define a type for the slice state
@@ -28,7 +35,15 @@ interface CharacterState {
 const initialState: CharacterState = {
   name: "default jonson",
   history: [],
-  status: { dn: 2, fh: [3], wealth: 10, le: 0, age: 0 },
+  status: {
+    dn: 2,
+    fh: [3],
+    wealth: 10,
+    le: 0,
+    age: 0,
+    educationLv: 1,
+    profession: { name: "freelance", income: 1 },
+  },
 };
 
 export const characterSlice = createSlice({
@@ -51,6 +66,14 @@ export const characterSlice = createSlice({
     modWealth: (state, action: { payload: number }) => {
       state.status.wealth = state.status.wealth + action.payload;
     },
+    modWealthWithProfession: (state) => {
+      console.log("income", state.status.profession.income);
+      state.status.wealth += state.status.profession.income;
+    },
+    setProfession: (state, action) => {
+      state.status.profession.name = action.payload;
+      state.status.profession.income = state.status.educationLv;
+    },
     addStatusDnFh: (state) => {
       const newDn = state.status.dn + 1;
       state.status.dn = newDn;
@@ -65,6 +88,9 @@ export const characterSlice = createSlice({
     },
     addLifeEvent: (state) => {
       state.status.le = state.status.le + 1;
+    },
+    addOneEducationLv: (state) => {
+      state.status.educationLv += 1;
     },
     resetCharacter: () => {
       let newName = prompt("What is this life's name?");
@@ -86,6 +112,9 @@ export const {
   rmStatusDnFh,
   resetCharacter,
   addLifeEvent,
+  modWealthWithProfession,
+  addOneEducationLv,
+  setProfession,
 } = characterSlice.actions;
 
 // Other code such as selectors can use the imported `RootState` type

@@ -17,9 +17,21 @@ const CharacterDisplay = () => {
             {character.status.age}
           </div>
           <div>
+            <span className='stat-label'>education: </span>
+            {character.status.educationLv}
+          </div>
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "2rem" }}>
+          <div>
+            <span className='stat-label'>income: </span>
+            {character.status.profession.income}
+          </div>
+          <div>
             <span className='stat-label'>wealth: </span>
             {character.status.wealth}
           </div>
+        </div>
+        <div>
           <div>
             <span className='stat-label'>Life Events: </span>
             {character.status.le}

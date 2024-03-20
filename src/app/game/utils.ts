@@ -33,3 +33,13 @@ export const checkFailingHealth = (rollSum: number, dn: number): boolean => {
 export const checkIfHealthImproved = (): boolean => {
   return rollD(4) === 4;
 };
+
+export const checkIfEducated = (): boolean => {
+  return rollD(20) <= 5;
+};
+
+export const checkIfFoundNewJob = () => {
+  const newJob = { name: "newJibber" }; // randomly select new job title
+  const foundNewJob = rollD(6) === 6;
+  return { foundNewJob, newJob };
+};

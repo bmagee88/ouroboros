@@ -1,6 +1,8 @@
 import React from "react";
 import WorkButton from "../WorkButton";
 import SelfCareButton from "../SelfCareButton";
+import EducateButton from "../EducateButton";
+import JobHuntButton from "../JobHuntButton";
 
 const ActionsContainer = () => {
   return (
@@ -11,6 +13,12 @@ const ActionsContainer = () => {
       </div>
       <div style={{ marginLeft: "1rem", marginTop: "1rem" }}>
         <SelfCareButton text={"self-care"} />
+      </div>
+      <div style={{ marginLeft: "1rem", marginTop: "1rem" }}>
+        <EducateButton text={"educate"} />
+      </div>
+      <div style={{ marginLeft: "1rem", marginTop: "1rem" }}>
+        <JobHuntButton text={"job search"} />
       </div>
     </>
   );
