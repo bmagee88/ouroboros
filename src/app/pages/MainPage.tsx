@@ -5,6 +5,7 @@ import ActionsContainer from "../components/actions/ActionsContainer/ActionsCont
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../state/store";
 import { setName } from "../state/character/charcterSlice";
+import DragonDisplay from "../components/displays/DragonDisplay/DragonDisplay";
 
 const MainPage = () => {
   const gameIsActive = useSelector((state: RootState) => state.game.isActive);
@@ -27,6 +28,7 @@ const MainPage = () => {
           paddingRight: "1rem",
           minHeight: "100vh",
         }}>
+        <DragonDisplay />
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div
             style={{
